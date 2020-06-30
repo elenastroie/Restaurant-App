@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="RestaurantOnline.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantOnline.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <UserControl.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Resources/Images/background.png"></ImageBrush>
+    </UserControl.Background>
+
+    <Grid>
+        <TextBlock  Height="200" Width="500" FontSize="12" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Margin="56,145,44,104.6">
+            Food Circle Operations, Inc. (doing business as Steak 'n Shake) is an Romanian casual 
+            restaurant chain concentrated primarily in the Midwestern United States with locations also in the South, 
+            Mid-Atlantic and Western United States, Europe, and the Middle East. The company is headquartered in 
+            Indianapolis, Indiana and is a wholly owned subsidiary of Biglari Holdings. As of 2018, 628 Food Circle 
+            restaurants were in operation, 414 corporate operations and 214 franchised establishments, although 
+            the company has since been attempting to convert to a fully franchised model. Typical restaurant locations 
+            have sit-down, drive-thru and front-window service, resulting in a hybrid of fast-food to-go service and 
+            diner-style sit-down service. Many Food Circle restaurants are open 24 hours a day, seven days per week. 
+            The menu features primarily burgers and hand-dipped milkshakes, though other entrees, side items, and drinks 
+            are also available.
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="RestaurantOnline.Views.RestaurantView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantOnline.Views"
+        mc:Ignorable="d"
+        Title="RestaurantWindow" Height="500" Width="900"
+        ResizeMode="NoResize">
+    <Grid>
+        <local:MenuBarView x:Name="MenuBarView" Visibility="Visible" Margin="0,0,641,0"/>
+        <local:AboutView x:Name="AboutView" Visibility="Visible" Margin="245,20,0,0"/>
+        <local:MenuView x:Name="MenuView" Visibility="Hidden" Margin="245,20,0,0"/>
+        <local:ProductsView x:Name="ProductsView" Visibility="Hidden" Margin="245,20,0,0"/>
+        <local:OrdersView x:Name="OrdersView" Visibility="Hidden" Margin="245,20,0,0"/>
+        <local:MyCartView x:Name="MyCartView" Visibility="Hidden" Margin="245,20,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="RestaurantOnline.Views.MenuBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantOnline.Views"
+             xmlns:viewModels="clr-namespace:RestaurantOnline.ViewModels"
+             mc:Ignorable="d" 
+              d:DesignHeight="500" d:DesignWidth="250"
+             Background="#d63447">
+
+    <UserControl.DataContext>
+        <viewModels:MenuBarViewModel/>
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Corbel"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="70"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border"
+                            BorderThickness="2"
+                                CornerRadius="3" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center" />
+
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.FontFamily" Value="Corbel Bold"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Vertical">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="Back" Command="{Binding SwitchToMainWindowCommand}"
+                Height="25" Width="40" Background="{x:Null}" BorderThickness="0" Foreground="White" FontSize="14">
+
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="0,40,10,0" Width="240">
+
+            <Button x:Name="Menu" Content="MENU" 
+                    Style ="{StaticResource ButtonStyle}"  Command="{Binding SwitchToMenuCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/menu.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="Products" Content="PRODUCTS" 
+                    Style ="{StaticResource ButtonStyle}"  Command="{Binding SwitchToProductCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/product.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="MyCart" Content="MY CART" 
+                    Style ="{StaticResource ButtonStyle}" Command="{Binding SwitchToMyCartCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/my_cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="Orders" Content="ORDERS" 
+                    Style ="{StaticResource ButtonStyle}"  Command="{Binding SwitchToOrderCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/order.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button x:Name="About" Content="ABOUT" 
+                    Style ="{StaticResource ButtonStyle}"  Command="{Binding SwitchToAboutCommand}">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/about.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+    </StackPanel>
+</UserControl>
